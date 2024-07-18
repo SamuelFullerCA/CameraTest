@@ -1,0 +1,116 @@
+
+.cameraCalculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    .cameraCalculatorHeader{
+        width: 100%;
+    }
+    p{
+        font-size: 19px;
+    }
+    .nouSlider{
+        width: 48%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .cameraTables{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: center;
+        p{
+            margin-top: 2rem;
+            font-size: 1.6em;
+            width: 100%;
+        }
+    }
+}
+
+.sliderValueContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    p{
+        font-size: 1.6em;
+        color: #0076bf;
+        width: 100%;
+    }
+    .sliderValue{
+        display: flex;
+        justify-content: center;   
+        align-items: center;         
+        text-align: center; 
+        width: 5rem;
+        height: 5rem;
+        font-size: 38px;
+        border: 1px solid grey;
+        border-radius: 50%;
+    }
+}
+
+.cameraCard{
+    width: 30%;
+    margin-left: 2rem;
+    font-size:26px;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    h3{
+        font-size: 48px;
+        font-weight: 400;
+        margin: 0;
+        padding: 1rem;
+        color: #0076bf;
+        border-bottom: 3px solid Black;
+    }
+    .tableStyle{
+        position: relative;
+        border-top: 2px solid black;
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+        .outsideText{
+            position: absolute;
+            font-size: 65%;
+            bottom: 2.4rem;
+        }
+    }
+}
+
+
+
+
+.familyHeader{
+    font-size: 40px;
+    color: #0076bf;
+}
+.indepentedtTable{
+    min-width: 50%;
+}
+
+
+@media (min-width: 1601px){
+    .shortform{
+        visibility: hidden;
+    }
+}
+@media (max-width: 1600px) {
+       .outsideText{
+        visibility: hidden;
+        }
+        .shortform{
+            visibility: visible;
+        }
+}
+
+@media (max-width: 1100px) {
+    .cameraCard{
+        margin-bottom: 3rem;
+        width:100%
+    }
+}
