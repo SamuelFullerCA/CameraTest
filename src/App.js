@@ -15,17 +15,17 @@ const cameras = [
     family: "PTZ-IP",
     modelName: "PTZ-IP 12x72",
     fullWide_Width_Difference: 1.4,
-    fullWide_Height_Difference: .79,
-    fullZoom_Width_Difference: .15,
-    fullZoom_Height_Difference: .084
+    fullWide_Height_Difference: .7875,
+    fullZoom_Width_Difference: .1485,
+    fullZoom_Height_Difference: .0838
   },
   {
     family: "PTZ-IP",
     modelName: "PTZ-IP 20x60",
-    fullWide_Width_Difference: 1.18,
-    fullWide_Height_Difference: .645,
-    fullZoom_Width_Difference: .07,
-    fullZoom_Height_Difference: .04
+    fullWide_Width_Difference: 1.178,
+    fullWide_Height_Difference: .642,
+    fullZoom_Width_Difference: .0698,
+    fullZoom_Height_Difference: .0395
   }
 ];
 

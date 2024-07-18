@@ -57,13 +57,13 @@ export default function CammeraCaluclator(props) {
                         </div>
                         <div className="tableStyle">
                             <div className="outsideText">-Wide- </div>
-                            <div>{(cam.fullWide_Width_Difference * sliderValue).toFixed(1)}<span className="shortform">(w)</span></div>
-                            <div>{(cam.fullWide_Height_Difference * sliderValue).toFixed(1)}<span className="shortform">(t)</span></div>
+                            <div>{Math.round((cam.fullWide_Width_Difference * sliderValue)*10)/10}<span className="shortform">(w)</span></div>
+                            <div>{Math.round((cam.fullWide_Height_Difference * sliderValue)*10)/10}<span className="shortform">(t)</span></div>
                         </div>
                         <div className="tableStyle">
                             <div className="outsideText">-Telephoto- </div>
-                            <div>{(cam.fullZoom_Width_Difference * sliderValue).toFixed(1)}<span className="shortform">(w)</span></div>
-                            <div>{(cam.fullZoom_Height_Difference * sliderValue).toFixed(1)}<span className="shortform">(t)</span></div>
+                            <div>{Math.round((cam.fullZoom_Width_Difference * sliderValue)*10)/10}<span className="shortform">(w)</span></div>
+                            <div>{Math.round((cam.fullZoom_Height_Difference * sliderValue)*10)/10}<span className="shortform">(t)</span></div>
                         </div>
                     </div>
                 ))}
