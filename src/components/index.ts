@@ -1,1 +1,1 @@
-export { default } from "./calulatorComponent"
+export { default } from "./CameraCalculator"

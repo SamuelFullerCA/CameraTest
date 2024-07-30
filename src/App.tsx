@@ -1,7 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import CammeraCaluclator from "./components"
+import CammeraCaluclator from "./components/index"
 
 const cameras = [
   {

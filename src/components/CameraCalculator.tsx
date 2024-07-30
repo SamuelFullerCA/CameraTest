@@ -1,12 +1,12 @@
 import React from "react";
-import "./calculatorComponent.css";
+import  styles from "./CameraCalculator.module.css";
 import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
 import { useState } from "react";
 
 
-// TypeScript interface for camera properties
-interface CameraProps {
+// Type interface for camera properties
+type CameraProps = {
     familyName: string;
     model: string;
     fullWide_Width_Difference: number;
@@ -15,8 +15,8 @@ interface CameraProps {
     fullZoom_Height_Difference: number;
   }
   
-// TypeScript interface for CameraCalculator props
-interface CameraCalculatorProps {
+// Type interface for CameraCalculator props
+type CameraCalculatorProps = {
     cameras: CameraProps[];
   }
 
@@ -32,17 +32,18 @@ interface CameraCalculatorProps {
   };
 
   return (
-    <section className="cameraCalculator">
-      <div className="cameraCalculatorHeader">
-      <h2 className="familyHeader text-center">
+    <section className={styles.cameraCalculator}>
+      <div className={styles.cameraCalculatorHeader}>
+      <h2 className={styles.familyHeader}>
             {cameras[0]?.familyName} Distance Calculator
             </h2>
-            <p className="text-center">
+            <p>
           Use this calculator to estimate the maximum subject image size that you will be able to achieve, based on the distance from the CAMERA to the SUBJECT.
         </p>
       </div>
-      <div className="nouSlider">
+      <div className={styles.nouSlider}>
         <Nouislider
+        aria-label="Interactive Slider"
          connect={[true, false]}
           start={[sliderValue]}
           behaviour="tap"
@@ -59,40 +60,40 @@ interface CameraCalculatorProps {
           onSlide={onSlide}
         />
       </div>
-      <div className="sliderValueContainer text-center">
+      <div className={styles.sliderValueContainer}>
         <p>What is the distance from the camera to subject?</p>
-        <div className="sliderValue">{sliderValue}</div>
+        <div className={styles.sliderValue}>{sliderValue}</div>
       </div>
-      <div className="cameraTables w-full text-center">
+      <div className={styles.cameraTables}>
         <p>All distances in feet or meters</p>
         {/* Generates tables for each camera passed into the calculator */}
         {cameras.map((cam, i) => (
-            <div key={i} className="cameraCard">
+            <div key={i} className={styles.cameraCard}>
             <div>
               <h3>{cam.model}</h3>
             </div>
-            <div className="tableStyle">
+            <div className={styles.tableStyle}>
               <div>Width</div>
               <div>Height</div>
             </div>
-            <div className="tableStyle">
+            <div className={styles.tableStyle}>
               <div>
                 {Math.round((cam.fullWide_Width_Difference * sliderValue) * 10) / 10}
-                <span className="shortform">(w)</span>
+                <span className={styles.shortform}>(w)</span>
               </div>
               <div>
                 {Math.round((cam.fullWide_Height_Difference * sliderValue) * 10) / 10}
-                <span className="shortform">(t)</span>
+                <span className={styles.shortform}>(w)</span>
               </div>
             </div>
-            <div className="tableStyle">
+            <div className={styles.tableStyle}>
               <div>
                 {Math.round((cam.fullZoom_Width_Difference * sliderValue) * 10) / 10}
-                <span className="shortform">(w)</span>
+                <span className={styles.shortform}>(t)</span>
               </div>
               <div>
                 {Math.round((cam.fullZoom_Height_Difference * sliderValue) * 10) / 10}
-                <span className="shortform">(t)</span>
+                <span className={styles.shortform}>(t)</span>
               </div>
             </div>
           </div>
